@@ -1,0 +1,60 @@
+
+Direktorij vsebuje nekaj aplikacij v okolju X11.
+
+Aplikacije demonstrirajo:
+1.  Povezovanje aplikacije s streznikom X
+2.  Postavljanje atributov okna X
+3.  Gradnjo okna
+4.  Popravljanje atributov okna
+5.  Postavljanje napotkov upravniku oken
+6.  Gradnjo graficnega konteksta
+7.  Popravljanje atributov graficnega konteksta
+8.  Realizacijo oken
+9.  Zanko dogodkov
+10. Prestrezanje dogodkov
+11. Risanje v okno X
+12. Razkroj okna in graficnega konteksta 
+13. Prekinitev povezave s streznikom X
+
+14. Delo z barvami
+
+
+Aplikacije:
+
+ hello.c
+ hello1.c
+ hello2.c
+
+prevajamo z
+
+./cc2 hello
+./cc2 hello1
+./cc2 hello2
+
+Analizirajte delovanje zgornjih aplikacij.
+
+Prav tako poskusite tudi dopolniti aplikacijo 
+palete.c, ki jo najdete v poddirektoriju palete, 
+s programsko kodo, ki bo omogočala izris 
+vseh barv prikazovalnika. 
+
+Analiziraj tudi delovanje naslednjih
+sistemskih aplikacij:
+
+bitmap    (bitmap editor)
+editres   (dynamic resource editor for X Toolkit)
+xfontsel  (selection of X11 font names)
+xwd       (X window dump)
+xwud      (X window undump)
+xwininfo  (W window information)
+xcalc     (calculator)
+xeyes     (eyes)
+xlogo     (X logo)
+xclock    (clock)
+xfig      (PS file editor)
+xdvi      (display dvi file)
+xev       (X event tester)
+
+Oglej si tudi druge sistemske aplikacije na
+/usr/bin
+

@@ -1,0 +1,15 @@
+gcc $1.c -I/usr/X11R6/include -L/usr/X11R6/lib -lX11 -lm -o $1 -g
+#
+#
+#   for ( j = 0 ; j < 256 ; j ++ )
+#     {
+#     for ( k = 0 ; k < 256 ; k ++ )
+#       {
+#          pixel = stdcolor.base_pixel +
+#              ( j%256 * stdcolor.red_mult ) +
+#              ( k%256 * stdcolor.green_mult ) +
+#              ( l%256 * stdcolor.blue_mult ) ;
+#            status = XPutPixel( image, j, k, pixel);
+#       }
+#     }
+#

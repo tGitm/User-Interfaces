@@ -1,0 +1,21 @@
+Program palete.c prejavamo z:
+
+./cc2 palete
+
+Program demonstrira:
+
+1.  Raziskavo graficnih sposobnosti danega
+    graficnega prikazovalnika
+2.  Izbor standardne palete za risanje
+3.  Generacijo bele barve in drugih barv
+4.  Gradnja slike (struktura XImage)
+5.  Vpisovanje vrednosti pikslov v to sliko
+6.  Prikaz slike (prenos slike v okno X)
+
+Dodelaj program tako, da v oknu X prikazes
+vse razpolozljive barve svojega graficnega
+prikazovalnika.
+
+
+
+
