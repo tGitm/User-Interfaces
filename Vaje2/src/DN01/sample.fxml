@@ -28,16 +28,8 @@
                         </MenuItem>
                   </items>
                 </Menu>
-                <Menu text="_Izbire1">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Delete" />
-                  </items>
-                </Menu>
-                <Menu text="_Izbire2">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="About" />
-                  </items>
-                </Menu>
+                <Menu text="_Izbire1" />
+                <Menu text="_Izbire2" />
                   <Menu text="_Pomoč">
                      <items>
                         <MenuItem onAction="#avtorCB" text="_O avtorju" />
@@ -47,11 +39,14 @@
             </MenuBar>
          </top>
          <bottom>
-            <ToolBar prefHeight="40.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <ToolBar prefHeight="23.0" prefWidth="600.0" BorderPane.alignment="CENTER">
               <items>
-                <Button mnemonicParsing="false" onAction="#izvediCB" text="Izvedi akcijo" />
-                  <Button layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#izhodCB" text="Izhod" />
-                  <Button layoutX="95.0" layoutY="13.0" mnemonicParsing="false" onAction="#avtorCB" text="O avtorju" />
+                <Button mnemonicParsing="false" onAction="#izbire1CB" text="Izbire1 T" />
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#izbire1CB" text="Izbire1 I" />
+                  <Button layoutX="76.0" layoutY="10.0" mnemonicParsing="false" onAction="#izbire1CB" text="Izbire1 M" />
+                  <Button layoutX="142.0" layoutY="10.0" mnemonicParsing="false" onAction="#izbire2CB" text="Izbire2 R" />
+                  <Button layoutX="208.0" layoutY="10.0" mnemonicParsing="false" onAction="#izbire2CB" text="Izbire2 U" />
+                  <Button layoutX="274.0" layoutY="10.0" mnemonicParsing="false" onAction="#izbire2CB" text="Izbire2 S" />
               </items>
             </ToolBar>
          </bottom>
