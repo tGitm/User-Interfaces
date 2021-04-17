@@ -1,0 +1,5 @@
+Podatki o vozilu: 
+Znamka: Volvo, Model: S60 Polestar, Moč(kW): 200, Prostornina: 3000, Tip: , Masa: 1800, Gorivo, Barva: Zelena, Št. vrat4, Št. sedežev: 5
+
+Podatki o zavarovancu 
+Ime: Laura, Priimek: Srpčič, Hišna št.: , Ulica: Poštna št.: , Kraj: , Datum rojstva: null, Izkušnje: Izkušen voznik

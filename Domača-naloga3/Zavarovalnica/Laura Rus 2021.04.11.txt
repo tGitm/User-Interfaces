@@ -1,0 +1,5 @@
+Podatki o vozilu: 
+Znamka: Volvo, Model: S60, Moč(kW): 220, Prostornina: 3000, Tip: Limuzina, Masa: 1600, GorivoBencin, Barva: Črna, Št. vrat5, Št. sedežev: 8
+
+Podatki o zavarovancu: 
+Ime: Laura, Priimek: Rus, Hišna št.: 32, Ulica: Zelena potPoštna št.: 1000, Kraj: Ljubljana, Datum rojstva: 2021-04-05, Izkušnje: Izkušen voznik

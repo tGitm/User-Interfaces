@@ -1,0 +1,8 @@
+Podatki o vozilu: 
+Znamka: Peugeot, Model: 208, Moč(kW): 90, Prostornina: 1600, Tip: Kupe, Masa: 1250, GorivoBencin, Barva: Modra, Št. vrat3, Št. sedežev: 4
+
+Podatki o zavarovancu: 
+Ime: Mitja, Priimek: Šepec, Hišna št.: 15, Ulica: RakovecbaPoštna št.: 8524, Kraj: Rakovec, Datum rojstva: 2021-04-29, Izkušnje: Izkušen voznikPodatki o zavarovanju: 
+Osnovno zavarovanje: AO+, Kasko: Polni kasko, Dodatno zavarovanje: 
+Podatki o registraciji: 
+Registrska oznaka: TextField[id=registrska, styleClass=text-input text-field], Prva registracija vozila: 2021-04-29, Kraj registracije: TextField[id=krajReg, styleClass=text-input text-field]

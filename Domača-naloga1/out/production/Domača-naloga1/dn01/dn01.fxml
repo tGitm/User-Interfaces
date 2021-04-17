@@ -5,7 +5,7 @@
 <?import javafx.scene.input.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dn01.Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dn01.Controller">
     <top>
         <BorderPane BorderPane.alignment="CENTER">
             <top>
@@ -104,7 +104,7 @@
                 <RowConstraints maxHeight="54.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <RadioButton fx:id="dodaj" mnemonicParsing="false" text="Dodaj">
+                  <RadioButton fx:id="dodaj" mnemonicParsing="false" selected="true" text="Dodaj">
                      <GridPane.margin>
                         <Insets left="15.0" />
                      </GridPane.margin>
