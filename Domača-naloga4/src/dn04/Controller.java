@@ -37,6 +37,7 @@ public class Controller implements Initializable {
     public Label status;
     public CheckBox zavarovanje;
     public TextField model;
+    public TextArea porocilo;
 
     public void ponastaviCB(ActionEvent actionEvent) {
         zacetekIzposoje.getEditor().clear();
@@ -96,11 +97,16 @@ public class Controller implements Initializable {
                 String tip = tipVozila.getValue().toString();
                 String menjalnik = tipMenjalnika.getValue().toString();
 
+                String zavar = "";
+                if (zavarovanje.isSelected()) {
+                    zavar = "Dodatno zavarovanje (2€/dan)";
+                }
+
                 //zakritje številk kreditne kartice, razen zadnjih 4-ih
 
                 FileWriter fw = new FileWriter(f);
                 BufferedWriter bw = new BufferedWriter(fw);
-                bw.write("Podatki o izposoji avtomobila: \n" + "Datum izposoje: " + zacetekIzposoje.getValue() + ", Datum vrnitve: " + konecIzposoje.getValue() + ", Kraj prevzema: " + prevzem + ", Kraj vrnitve: " + vrnitev + ", Ura rezervacije: " + uraRez.getText() + ", Ura vrnitve: " + uraVrnit.getText() + ", Tip avtomobila: " + tip + ", Tip menjalnika: " + menjalnik + ", Gorivo: " + gor + ", Model avtomobila: " + model.getText() + ", Dodatno zavarovanje: " + zavarovanje + "\n\n"
+                bw.write("Podatki o izposoji avtomobila: \n" + "Datum izposoje: " + zacetekIzposoje.getValue() + ", Datum vrnitve: " + konecIzposoje.getValue() + ", Kraj prevzema: " + prevzem + ", Kraj vrnitve: " + vrnitev + ", Ura rezervacije: " + uraRez.getText() + ", Ura vrnitve: " + uraVrnit.getText() + ", Tip avtomobila: " + tip + ", Tip menjalnika: " + menjalnik + ", Gorivo: " + gor + ", Model avtomobila: " + model.getText() + ", Dodatno zavarovanje: " + zavar + "\n\n"
                         + "Podatki o stranki: \n" + "Ime: " + ime.getText() + ", Priimek: " + priimek.getText() + ", Naslov prebivališča: " + naslovStranke.getText() + ", Poštna št. in kraj: " + postnaStevilka.getText() + ", Email: " + emailStranke.getText() + ", Telefonska št.: " + telStevilka.getText() + ", Starost: " + starostStranke.getText() + ", Leta izkušenj v vožnji: " + izkusnje + "\n\n"
                         + "Podatki o plačilu: \n" + "Za plačilo: " + zaPlacilo.getText() + ", Način plačila: " + placilo + ", Številka kreditne kartice: " + "XXXX-XXXX-XXXX-XXXX" + ", CCV koda: " + "XXX");
                 bw.close();
@@ -132,5 +138,39 @@ public class Controller implements Initializable {
         krajPrevzema.getItems().addAll("Ljubljana", "Koper", "Maribor", "Brežice", "Novo mesto", "Nova Gorica");
         krajVrnitve.getItems().addAll("Ljubljana", "Koper", "Maribor", "Brežice", "Novo mesto", "Nova Gorica");
         tipMenjalnika.getItems().addAll("Avtomatski", "Ročni");
+    }
+
+    public void pregledCB(ActionEvent actionEvent) {
+        if (!uraVrnit.getText().isEmpty() && !uraRez.getText().isEmpty() && !ime.getText().isEmpty() && !priimek.getText().isEmpty() && !naslovStranke.getText().isEmpty() &&
+                !emailStranke.getText().isEmpty() &&!telStevilka.getText().isEmpty() &&!starostStranke.getText().isEmpty() &&!priimek.getText().isEmpty() &&!postnaStevilka.getText().isEmpty() &&
+                !izkusnje.getText().isEmpty() &&!priimek.getText().isEmpty() &&!zaPlacilo.getText().isEmpty() &&!stKartice.getText().isEmpty() &&!ccvKoda.getText().isEmpty() &&
+                !zacetekIzposoje.getValue().toString().isEmpty() && !konecIzposoje.getValue().toString().isEmpty() && !krajVrnitve.getValue().toString().isEmpty() &&
+                !krajPrevzema.getValue().toString().isEmpty() && !tipMenjalnika.getValue().toString().isEmpty() && !tipVozila.getValue().toString().isEmpty() && !gorivo.getValue().toString().isEmpty()) {
+            status.setText("Vnešeni podatki so na voljo v zavihku 'Pregled podatkov'");
+            String placilo = "";
+            if (kartica.isSelected()) {
+                placilo = "Kreditna kartica";
+            } else {
+                placilo = "Gotovina ob prevzemu";
+            }
+
+            String prevzem = krajPrevzema.getValue().toString();
+            String vrnitev = krajVrnitve.getValue().toString();
+            String gor = gorivo.getValue().toString();
+            String tip = tipVozila.getValue().toString();
+            String menjalnik = tipMenjalnika.getValue().toString();
+
+            String zavar = "";
+            if (zavarovanje.isSelected()) {
+                zavar = "Dodatno zavarovanje (2€/dan)";
+            }
+
+            porocilo.setText("Podatki o izposoji avtomobila: \n" + "Datum izposoje: " + zacetekIzposoje.getValue() + ", Datum vrnitve: " + konecIzposoje.getValue() + ", Kraj prevzema: " + prevzem + ", Kraj vrnitve: " + vrnitev + ", Ura rezervacije: " + uraRez.getText() + ", Ura vrnitve: " + uraVrnit.getText() + ", Tip avtomobila: " + tip + ", Tip menjalnika: " + menjalnik + ", Gorivo: " + gor + ", Model avtomobila: " + model.getText() + ", Dodatno zavarovanje: " + zavar + "\n\n"
+                    + "Podatki o stranki: \n" + "Ime: " + ime.getText() + ", Priimek: " + priimek.getText() + ", Naslov prebivališča: " + naslovStranke.getText() + ", Poštna št. in kraj: " + postnaStevilka.getText() + ", Email: " + emailStranke.getText() + ", Telefonska št.: " + telStevilka.getText() + ", Starost: " + starostStranke.getText() + ", Leta izkušenj v vožnji: " + izkusnje.getText() + "\n\n"
+                    + "Podatki o plačilu: \n" + "Za plačilo: " + zaPlacilo.getText() + ", Način plačila: " + placilo + ", Številka kreditne kartice: " + "XXXX-XXXX-XXXX-XXXX" + ", CCV koda: " + ccvKoda.getText());
+        }
+        else  {
+            status.setText("Izpolni vse podatke!!");
+        }
     }
 }

@@ -469,6 +469,19 @@
                   </GridPane>
                </content>
             </Tab>
+            <Tab text="Pregled podatkov">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <center>
+                        <TextArea fx:id="porocilo" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                           </BorderPane.margin>
+                        </TextArea>
+                     </center>
+                  </BorderPane>
+               </content>
+            </Tab>
         </tabs>
       </TabPane>
    </center>
@@ -489,7 +502,7 @@
                   <Insets left="30.0" />
                </GridPane.margin>
             </Label>
-            <Button mnemonicParsing="false" onAction="#shraniCB" text="Shrani">
+            <Button mnemonicParsing="false" onAction="#shraniCB" text="Shrani podatke">
                <GridPane.margin>
                   <Insets left="30.0" />
                </GridPane.margin>
@@ -499,6 +512,7 @@
                <GridPane.margin>
                   <Insets right="30.0" />
                </GridPane.margin></Button>
+            <Button alignment="CENTER_RIGHT" layoutX="40.0" layoutY="11.0" mnemonicParsing="false" onAction="#pregledCB" text="Pregled podatkov" GridPane.halignment="CENTER" />
          </children>
       </GridPane>
    </bottom>
